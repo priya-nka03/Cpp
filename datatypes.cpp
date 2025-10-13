@@ -54,11 +54,12 @@ int main() {
 
 
     //Ques 4:Write a program that demonstrates implicit and explicit type conversion in C++ (for example, from int to float and float to int).
-    float result ;
+    int result ;
     int number1=90;
     float number2=89.2;
     result = number1+number2;               // number2 is implicted converted (int to float) before adding to number 1
     cout<<result<<endl;
+    cout<<sizeof(result)<<endl;
 
     //Ques 5: Write a C++ program to swap two numbers using a temporary variable and display the result.
 
