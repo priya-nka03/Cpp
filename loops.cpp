@@ -11,12 +11,40 @@ int main (){
     }
     */
    //Ques 1.Write a program to find the sum of first N natural numbers using a for loop.
-   int num;
-   cout<<"Enter the number:";
-   cin>>num;
-   int sum=0;
-   for (int i=1;i<=num;i++){
-        sum+=i;
+//    int num;
+//    cout<<"Enter the number:";
+//    cin>>num;
+//    int sum=0;
+//    for (int i=1;i<=num;i++){
+//         sum+=i;
+//    }
+//    cout<<sum<<endl;
+
+   // Ques2: factorial of number
+   int num2;
+   cout<<"Enter number:";
+   cin>>num2;
+   int fact=1;
+   for (int i=num2;i>0;i--){
+        fact*=i;
    }
-   cout<<sum<<endl;
+   cout<<fact<<endl;
+
+   // while loop => this exceute the block of code repeatedly as long as the given condition is true. The condition is checked before each iteration.
+   /*syntax:
+   intialization
+   while(condition){
+    increment
+    }*/
+
+    // Ques3: print table of a number
+    int num3;
+    cout<<"Enter number:";
+    cin>>num3;
+    int i=1;
+    while(i<=10){
+        cout<<num3<<" X "<<i<<" = "<<num3*i<<endl;
+        i++;
+    }
+    
 }
