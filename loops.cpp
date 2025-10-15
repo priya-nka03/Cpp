@@ -11,14 +11,14 @@ int main (){
     }
     */
    //Ques 1.Write a program to find the sum of first N natural numbers using a for loop.
-//    int num;
-//    cout<<"Enter the number:";
-//    cin>>num;
-//    int sum=0;
-//    for (int i=1;i<=num;i++){
-//         sum+=i;
-//    }
-//    cout<<sum<<endl;
+   int num;
+   cout<<"Enter the number:";
+   cin>>num;
+   int sum=0;
+   for (int i=1;i<=num;i++){
+        sum+=i;
+   }
+   cout<<sum<<endl;
 
    // Ques2: factorial of number
    int num2;
@@ -60,7 +60,20 @@ int main (){
     }
     cout<<rev<<endl;
 
+        //3. do-while loop => it is similar to while loop it execute as long as the condition is ture but here the code will exceute once atleast (means ek baar toh exceute hoga hi hoga code). and the condition here is check after the exceute of each iteration.
 
+        /*syntax:
+        do{
+        code
+        }while(condition)
+        */
 
-    
+        // Ques4:Write a program using a do-while loop to keep asking the user to enter a number until they enter 0.
+        int num5;
+        do{
+            cout<<"Enter number:";
+            cin>>num5;
+            cout<<num5;
+            cout<<"For Exit press 0"<<endl;
+        } while(num5!=0);
 }
