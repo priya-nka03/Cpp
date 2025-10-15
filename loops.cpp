@@ -46,5 +46,22 @@ int main (){
         cout<<num3<<" X "<<i<<" = "<<num3*i<<endl;
         i++;
     }
-    
+
+    // Ques4: reverse a number using while loop
+    int num4;
+    cout<<"Enter number:";
+    cin>>num4;
+    int rev=0;
+    int pow=1;
+    int r;
+    while(num4!=0){
+        r=num4%10;
+        rev=(rev*pow)+r;
+        num4/=10;
+        pow*=10;
+        cout<<rev<<endl;
+        cout<<num4<<endl;
+        cout<<pow<<endl;
+    }
+    cout<<rev<<endl;
 }
