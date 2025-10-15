@@ -52,16 +52,15 @@ int main (){
     cout<<"Enter number:";
     cin>>num4;
     int rev=0;
-    int pow=1;
     int r;
     while(num4!=0){
         r=num4%10;
-        rev=(rev*pow)+r;
+        rev=(rev*10)+r;
         num4/=10;
-        pow*=10;
-        cout<<rev<<endl;
-        cout<<num4<<endl;
-        cout<<pow<<endl;
     }
     cout<<rev<<endl;
+
+
+
+    
 }
