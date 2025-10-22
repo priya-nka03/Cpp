@@ -22,6 +22,22 @@ int binarysearch(int *arr,int start,int end,int target){
         binarysearch(arr,start,end-1,target);
     }
 }
+
+void rotate_by_k_element(int *arr,int size,int k){
+    int temp[size];
+    for(int i=0;i<size;i++){
+        temp[(i+k)%size]=arr[i];
+    }
+    
+    for (int i=0;i<size;i++){
+        arr[i]=temp[i];
+    }
+
+    for (int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
 int main (){
     int arr[]={3,2,4,3,90,93,8};
     int size=(sizeof(arr)/sizeof(arr[0]));
@@ -29,4 +45,5 @@ int main (){
     int end=size-1;
     cout<<linearsearch(arr,size,0)<<endl;
     cout<<binarysearch(arr,start,end,90)<<endl;
+    rotate_by_k_element(arr,size,2);
 }
