@@ -11,10 +11,18 @@ void matrixSum(int (*arr)[4],int row,int column,int (*arr2)[4]){
 }
 
 void transpose(int arr[][4],int row,int column){
+    int *temp[row][column];
+    for (int i=0;i<row;i++){
+        for(int j=i+1;j<column;j++){
+            swap(arr[i][j],arr[j][i]);
+        }
+    }
+
     for (int i=0;i<row;i++){
         for(int j=0;j<column;j++){
-            
+            cout<<arr[i][j]<<" ";
         }
+        cout<<endl;
     }
 }
 int main (){
@@ -36,22 +44,22 @@ int main (){
 //    int arr3_2d={{7,3},{3,21}};
 
     // Ques1: input and output of 2D array with the help of loops
-    int row=4; int column =2;
-    int arr4_2D[row][column];
-    cout<<"Enter the elements:";
-    for (int i=0;i<row;i++){
-        for(int j=0;j<column;j++){
-            cin>>arr4_2D[i][j];
-        }
-    }
-    cout<<endl;
-    cout<<"Matrix"<<endl;
-    for(int i=0;i<row;i++){
-        for(int j=0;j<column;j++){
-            cout<<arr4_2D[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+    // int row=4; int column =2;
+    // int arr4_2D[row][column];
+    // cout<<"Enter the elements:";
+    // for (int i=0;i<row;i++){
+    //     for(int j=0;j<column;j++){
+    //         cin>>arr4_2D[i][j];
+    //     }
+    // }
+    // cout<<endl;
+    // cout<<"Matrix"<<endl;
+    // for(int i=0;i<row;i++){
+    //     for(int j=0;j<column;j++){
+    //         cout<<arr4_2D[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
 
     /*2d array in function => arr[][column]
          OR
@@ -61,4 +69,6 @@ int main (){
     int mat1[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
     int mat2[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
     matrixSum(mat1,4,4,mat2);
+
+    transpose(mat1,4,4);
 }
