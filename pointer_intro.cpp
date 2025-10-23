@@ -1,5 +1,10 @@
 #include <iostream>
 using namespace std;
+void swapp(int *a, int *b){
+    (*a)=(*a)+(*b);
+    *b=(*a)-(*b);
+    *a=(*a)-(*b);
+}
 int main(){
     // Pointer : pointer is a varaible which points to another variable (it basically store the address of the variable inside a variable).
 
@@ -21,5 +26,32 @@ int main(){
     cout<<*intprt<<endl;
 
 
-    // pointer arithemetic -> addtion substration of a constant, increment, drecerment and substraction of two pointers .
+    // pointer arithemetic -> addtion substration of a constant, increment, drecerment and substraction of two pointers.
+    
+    // increment 
+    cout<<"Before increment:"<<intprt<<endl;
+    intprt++;
+    cout<<"After increment:"<<intprt<<endl;
+
+    // decrement 
+    cout<<"Befor decrement:"<<intprt<<endl;
+    intprt--;
+    cout<<"After increment:"<<intprt<<endl;
+
+    //addition and substraction
+    cout<<intprt+5<<endl;           // intprt + 5*(int size)
+
+    cout<<intprt-5<<endl;
+
+    //two pointer subtraction
+    // conditions 1. both the pointers must be of same datatype 2. both the pointer must be of same array 
+    int number=88;
+    int *prt1;
+    int *prt2=prt1+5;
+    cout<<prt2-prt1<<endl;
+
+    //swap with the help of pointer
+    int a=90;int b=38;
+    swapp(&a,&b);
+    cout<<a<<"and"<<b<<endl;
 }
