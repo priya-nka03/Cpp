@@ -62,7 +62,7 @@ int main (){
     Student *st1= new Student;
     st1->set_marks(7007,"Priyanka Pal",94);
     st1->display_details();
-    
+    delete st1;
     Bank acc1;
     acc1.set_data("Priyanka Pal","031768");
     acc1.display_acc_details();
