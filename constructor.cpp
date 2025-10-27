@@ -81,6 +81,7 @@ Types:
     Complex C1(9,2),C2(6,1), result;
     result =C1.add(C1,C2);
     result.display(result);
+    C1.display(C1);
     result=C1.subtract(C1,C2);
     result.display(result);
 }
