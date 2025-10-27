@@ -50,7 +50,20 @@ class Bank{
         cout<<"Your Current Balance:"<<balance<<endl;
     }
     void withdraw (float amt){
-        if()
+        if(amt> balance){
+            cout<<"Insufficient Balance"<<endl;
+            cout<<"Your Balance :"<<balance<<endl;
+            return ;
+        }
+        else{
+            balance-=amt;
+            cout<<"You widhdraw the amount "<<amt<<" from your account."<<endl;
+            cout<<"Your current balance:"<<balance<<endl;
+        }
+    }
+    void display(){
+        cout<<"Hello customer"<<endl;
+        cout<<"Your Current balance is "<<balance<<endl;
     }
 };
 int main (){
@@ -66,4 +79,9 @@ int main (){
     st1->input(78,"Priyanka",97);
     st1->display();
     delete st1;
+
+    Bank cus1("1004323480","Ram dev");
+    cus1.deposit(800);
+    cus1.withdraw(700);
+    cus1.display();
 }
